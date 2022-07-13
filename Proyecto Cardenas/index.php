@@ -14,7 +14,7 @@ $pdo=new Conexion();
     <!-- fuente externa cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" >
-    <link rel="stylesheet" href="/Proyecto Cardenas/css/estilo.css">
+    <link rel="stylesheet" href="/Punto-de-Venta/Proyecto Cardenas/css/estilo.css">
 
 
 </head>
