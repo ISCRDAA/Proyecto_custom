@@ -1,4 +1,4 @@
-<!DOCTYPE html>7
+<!DOCTYPE html>
 
 <?php 
 include'conexion.php';
