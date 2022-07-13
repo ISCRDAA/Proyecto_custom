@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- fuente externa cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/estilo.css">
+
+
+</head>
+<body>
+<!-- header seccion comienzo-->
+
+<header class="header">
+    <section class="flex">
+
+        <a href="index.html" class="logo"><img src="/imagenes/logo1.JPG"></a>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="informacion.html">Informacion</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+        <div class="icons">
+            <a href="buscar.html"><i class="fas fa-search"> </i> </a>
+            <a href="carrito.html"><i class="fas fa-shopping-cart"> </i> <span>(3)</span> </a>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+        <div class="profile">
+
+            <p class="name"> Inicio de sesion</p>
+            <div class="flex">
+                <a href="perfil.html" class="btn">perfil</a>
+                <a href="#" class="delete-btn"> salir</a>
+            </div>
+            <p class="account"> <a href="login.html"> login </a> or <a href="registro.html"> registro</a> </p>
+
+        </div>
+    </section>
+
+</header>
+
+<!-- header seccion fin-->
+
+<!-- hero seccion inicio-->
+
+<section class="hero">
+
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="content">
+                    <span>Ordena en linea</span>
+                    <h3>Gorras</h3>
+                    <a href="productos.html" class="btn"> muestra mas productos</a>
+                </div>
+                <div class="image">
+                    <img src="/imagenes/gorras.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="content">
+                    <span>Ordena en linea</span>
+                    <h3>playeras</h3>
+                    <a href="productos.html" class="btn"> muestra mas productos</a>
+                </div>
+                <div class="image">
+                    <img src="/imagenes/playera.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="content">
+                    <span>Ordena en linea</span>
+                    <h3>Tazas</h3>
+                    <a href="productos.html" class="btn"> muestra  mas productos</a>
+                </div>
+                <div class="image">
+                    <img src="/imagenes/taza.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="content">
+                    <span>Ordena en linea</span>
+                    <h3>Tarros</h3>
+                    <a href="productos.html" class="btn"> muestra  mas productos</a>
+                </div>
+                <div class="image">
+                    <img src="/imagenes/tarro.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+
+</section>
+
+
+
+<!-- hero seccion fin-->
+
+<!-- category seccion incio-->
+
+<section class="category">
+    <h1 class="title"> Categorias de productos</h1>
+    <div class="box-container">
+        <a href="#" class="box">
+            <img src="/imagenes/sublimados.jpg" alt="">
+            <h3>sublimados</h3>
+        </a>
+
+        <a href="#" class="box">
+            <img src="/imagenes/estampado2.jpg" alt="">
+            <h3>estampados</h3>
+        </a>
+    </div>
+</section>
+
+
+
+
+
+<!-- category seccion fin-->
+
+<!-- home products seccion inicio-->
+
+<section class="products">
+    <h1 class="title">Productos en oferta</h1>
+    <div class="box-container">
+        <form action="" method="post" class="box">
+            <button type="submit" class="fas fa-eye" name="quick_view"></button>
+            <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
+            <img src="/cargar-imagenes/gorra.jpg" alt="">
+            <a href="#" class="cat">Gorra</a>
+            <div class ="name">Gorra mexicana 01</div>
+            <div class="flex">
+                <div class="price"><span>$</span>300</div>
+                <input type="number" name="qty" class="qty" min="1" max="10" value="1"
+                       onkeypress="if (this.value.length ==2)return false;">
+            </div>
+        </form>
+
+        <form action="" method="post" class="box">
+            <button type="submit" class="fas fa-eye" name="quick_view"></button>
+            <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
+            <img src="/cargar-imagenes/sudadera.jpg" alt="">
+            <a href="#" class="cat">sudadera</a>
+            <div class ="name">sudadera mexicana 01</div>
+            <div class="flex">
+                <div class="price"><span>$</span>400</div>
+                <input type="number" name="qty" class="qty" min="1" max="10" value="1"
+                       onkeypress="if (this.value.length ==2)return false;">
+            </div>
+        </form>
+
+        <form action="" method="post" class="box">
+            <button type="submit" class="fas fa-eye" name="quick_view"></button>
+            <button type="submit" class="fas fa-shopping-cart" name="add_to_cart"></button>
+            <img src="/cargar-imagenes/playera.jpeg" alt="">
+            <a href="#" class="cat">playera</a>
+            <div class ="name">playera mexicana 01</div>
+            <div class="flex">
+                <div class="price"><span>$</span>350</div>
+                <input type="number" name="qty" class="qty" min="1" max="10" value="1"
+                       onkeypress="if (this.value.length ==2)return false;">
+            </div>
+        </form>
+    </div>
+    <div class="more-btn">
+        <a href="productos.html" class="btn">Ver todo</a>
+    </div>
+</section>
+
+
+
+
+<!-- home products seccion fin-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer seccion inicio-->
+
+<footer class="footer">
+    
+    <section class="grid">
+        
+        <div class="box">
+            <img src="/imagenes/mail%20(1).svg" alt="">
+            <h3> nuestro email</h3>
+            <a href="mailto:Angel2gol@hotmail.com">angel2gol@hotmail.com</a>
+            
+        </div>
+
+        <div class="box">
+            <img src="/imagenes/clock%20(1).svg" alt="">
+            <h3> Horarios</h3>
+            <p>07:00 am  a 10:00 pm</p>
+
+        </div>
+
+        <div class="box">
+            <img src="/imagenes/map-pin.svg" alt="">
+            <h3> nuestra direccion</h3>
+            <a href="#">Hidlago, Tulancingo-doria oriente 105</a>
+
+        </div>
+
+        <div class="box">
+            <img src="/imagenes/smartphone.svg" alt="">
+            <h3> nuestro telefono</h3>
+            <a href="tel"> Tel: 775-205-0635</a>
+
+        </div>
+        
+    </section>
+    
+    
+    
+</footer>
+
+<div class="creditos">creado por <span>Ing.Angel Alonso </span></div>
+
+
+
+
+
+
+
+
+
+<!-- footer seccion fin-->
+
+<div class="loader">
+    <img src="/imagenes/loader.gif" alt="">
+</div>
+
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!--scripts seccion inicio -->
+
+<script src="/js/script.js"></script>
+
+<script>
+    var swiper = new Swiper(".hero-slider", {
+        loop:true,
+        effect: "flip",
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable:true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
+     </script>
+
+
+
+
+
+<!-- scripts seccion fin-->
+
+
+</body>
+</html>

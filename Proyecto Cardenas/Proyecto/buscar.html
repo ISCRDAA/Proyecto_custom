@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar</title>
+    <!-- fuente externa cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/estilo.css">
+
+
+</head>
+<body>
+<!-- header seccion comienzo-->
+
+<header class="header">
+    <section class="flex">
+
+        <a href="index.html" class="logo"><img src="/imagenes/logo1.JPG"></a>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="informacion.html">Informacion</a>
+            <a href="nosotros.html">Nosotros</a>
+        </nav>
+        <div class="icons">
+            <a href="buscar.html"><i class="fas fa-search"> </i> </a>
+            <a href="carrito.html"><i class="fas fa-shopping-cart"> </i> <span>(3)</span> </a>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+        <div class="profile">
+
+            <p class="name"> Inicio de sesion</p>
+            <div class="flex">
+                <a href="perfil.html" class="btn">perfil</a>
+                <a href="#" class="delete-btn"> salir</a>
+            </div>
+            <p class="account"> <a href="login.html"> login </a> or <a href="registro.html"> registro</a> </p>
+
+        </div>
+    </section>
+
+</header>
+
+<!-- header seccion fin-->
+
+<div class="heading">
+    <h3> Buscar</h3>
+    <p> <a href="index.html">Inicio</a>  <span>/Buscar</span> </p>
+</div>
+
+
+<!-- buscar seccion inicio-->
+
+<section class="search-form">
+    <form  method="post" action="">
+        <input type="text" name="search_box" placeholder="Buscar Aqui ..." class="box">
+        <button type="submit" name="search_btn" class="fas fa-search"></button>
+    </form>
+</section>
+
+<!-- buscar seccion fin-->
+
+<section class="products" style="min-height: 100vh; padding-top: 0;">
+
+</section>
+
+
+
+
+
+
+<!-- footer seccion inicio-->
+
+<footer class="footer">
+
+    <section class="grid">
+
+        <div class="box">
+            <img src="/imagenes/mail%20(1).svg" alt="">
+            <h3> nuestro email</h3>
+            <a href="mailto:Angel2gol@hotmail.com">angel2gol@hotmail.com</a>
+
+        </div>
+
+        <div class="box">
+            <img src="/imagenes/clock%20(1).svg" alt="">
+            <h3> Horarios</h3>
+            <p>07:00 am  a 10:00 pm</p>
+
+        </div>
+
+        <div class="box">
+            <img src="/imagenes/map-pin.svg" alt="">
+            <h3> nuestra direccion</h3>
+            <a href="#">Hidlago, Tulancingo-doria oriente 105</a>
+
+        </div>
+
+        <div class="box">
+            <img src="/imagenes/smartphone.svg" alt="">
+            <h3> nuestro telefono</h3>
+            <a href="tel"> Tel: 775-205-0635</a>
+
+        </div>
+
+    </section>
+
+
+
+</footer>
+
+<div class="creditos">creado por <span>Ing.Angel Alonso </span></div>
+
+
+
+
+
+
+
+
+
+<!-- footer seccion fin-->
+
+<div class="loader">
+    <img src="/imagenes/loader.gif" alt="">
+</div>
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!--scripts seccion inicio -->
+
+<script src="/js/script.js"></script>
+
+<script>
+    var swiper = new Swiper(".hero-slider", {
+        loop:true,
+        effect: "flip",
+        grabCursor: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable:true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
+</script>
+
+
+
+
+
+<!-- scripts seccion fin-->
+
+</body>
+</html>
