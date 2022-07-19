@@ -39,7 +39,7 @@ html{
     font-size: 62.5%;
     overflow-x:hidden ;
     scroll-behavior: smooth;
-    stop-opacity: 7%;
+    scroll-padding-top: 7rem;
 }
 section{
     margin: 0 auto;
@@ -78,7 +78,7 @@ section{
 
 .header{
     position: sticky;
-    top: 0; left: 0; right: 0;
+    top: 0; left: 0; 
     z-index: 1000;
     background-color: var(--white);
     border-bottom: var(--border);
@@ -107,7 +107,7 @@ section{
 }
 
 .header .flex .icons > *{
-    margin-left: 1.5rem;
+    margin-left: 1.7rem;
     font-size: 2.5rem;
     color: var(--black);
     cursor: pointer;
@@ -118,7 +118,8 @@ section{
 }
 
 .header .flex .icons span{
-    font-size: 2.5rem;
+    font-size: 2rem;
+   
 }
 
 .header .flex .profile{

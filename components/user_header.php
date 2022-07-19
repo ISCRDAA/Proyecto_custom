@@ -11,7 +11,7 @@ if (isset($message)) {
 }
 
 ?>
-<div class="header">
+<header class="header">
     <section class="flex">
 
         <a href="index.php" class="logo"><img src="images/logo1.jpg"></a>
@@ -25,9 +25,9 @@ if (isset($message)) {
 
         <div class="icons">
             <?php
-            $count_user_cart_items = $conn->prepare("SELECT * FROM `carrito` WHERE user_id =?");
-            $count_user_cart_items->execute([$user_id]);
-            $total_user_cart_items = $count_user_cart_items->rowCount();
+                $count_user_cart_items = $conn->prepare("SELECT * FROM `carrito` WHERE user_id =?");
+                $count_user_cart_items->execute([$user_id]);
+               $total_user_cart_items = $count_user_cart_items->rowCount();
 
             ?>
             <a href="buscar.html"><i class="fas fa-search"> </i> </a>
@@ -37,26 +37,27 @@ if (isset($message)) {
         </div>
 
         <div class="profile">
+            
             <?php
                 $select_profile = $conn->prepare("SELECT * FROM `usuarios` WHERE id = ?");
                 $select_profile->execute([$user_id]);
                 if ($select_profile->rowCount() > 0) {
-                $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+                    $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
 
             ?>
-            <p class="name"><?= $fetch_profile['name']; ?></p>
-            <div class="flex">
-                 <a href="perfil.php" class="btn"> perfil</a>
-                 <a href="components/user_logout.php" onclick="return confirm('salir de la pagina?');" class="delete-btn">Salir</a>
-            </div>
+                <p class="name"><?= $fetch_profile['name']; ?></p>
+                <div class="flex">
+                    <a href="perfil.php" class="btn"> perfil</a>
+                    <a href="components/user_logout.php" onclick="return confirm('salir de la pagina?');" class="delete-btn">Salir</a>
+                </div>
             <?php
-            } 
-            else {
+                }
+                else {
             ?>
                 <p class="name">Inica sesion primero</p>
                 <a href="login.php" class="btn">Inicia sesion</a>
             <?php
-            }
+             }
             ?>
 
 
@@ -64,5 +65,4 @@ if (isset($message)) {
         </div>
 
     </section>
-
-</div>
+</header>
