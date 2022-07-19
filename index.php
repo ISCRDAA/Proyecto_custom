@@ -55,9 +55,9 @@ if (isset($_SESSION['user_id'])) {
 
 
 
-
-
-
+<!-- seccion footer inicio -->
+<?php include 'components/footer.php'?>
+<!-- sección footer fin -->
 
 <!--  Apartado de los links de js -->
 
