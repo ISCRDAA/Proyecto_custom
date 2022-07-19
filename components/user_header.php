@@ -56,7 +56,7 @@ if (isset($message)) {
             }
             else {
             ?>
-                <p class="name">Inica sesion primero</p>
+                <p class="name">Inicia sesion primero</p>
                 <a href="login.php" class="btn">Inicia sesion</a>
             <?php
             }
