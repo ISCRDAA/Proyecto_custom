@@ -16,11 +16,11 @@ if (isset($message)) {
 
         <a href="index.php" class="logo"><img src="images/logo1.jpg"></a>
         <nav class="navbar">
-            <a href="index.php">Inicio</a>
-            <a href="menu.php">Productos</a>
-            <a href="contactanos.php">Informacion</a>
+           <a href="index.php"><img src="images/home.png" alt="">Inicio</a>
+            <a href="menu.php"><img src="images/productos.png" alt="">Productos</a>
+            <a href="contactanos.php"><img src="images/informacion.png" alt="">Informacion</a>
             <a href="nosotros.php">Nosotros</a>
-            <a href="ordenes.php">ordenes de compra</a>
+            <a href="ordenes.php"><img src="images/ordenes.png" alt="">ordenes de compra</a>
         </nav>
 
         <div class="icons">
@@ -56,7 +56,7 @@ if (isset($message)) {
             }
             else {
             ?>
-                <p class="name">Inicia sesion primero</p>
+                <img src="images/key.png" alt="" class="logo"><p class="name" > inicia sesion primero</p>
                 <a href="login.php" class="btn">Inicia sesion</a>
             <?php
             }
