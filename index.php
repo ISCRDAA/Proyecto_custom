@@ -132,7 +132,21 @@ if (isset($_SESSION['user_id'])) {
             ?>
             <form action="" method="POST" class="box">
                 <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
-                <input type="hidden" name="name" value="<?= $fetch_products['id']; ?>">
+                <input type="hidden" name="producto" value="<?= $fetch_products['producto']; ?>">
+                <input type="hidden" name="precio" value="<?= $fetch_products['precio']; ?>">
+                <input type="hidden" name="imagen" value="<?= $fetch_products['imagen']; ?>">
+                <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fas fa-eye"></a>
+                <button type="submit" name="add_to_cart" class="fas fa-shopping-cart"></button>
+                <img src="uploaded_img/<?= $fetch_products['imagen']; ?>" class="image" alt="">
+                <a href="" class="category.php?category=<?= $fetch_products['categoria']; ?>"></a>
+                <div class="name"><?= $fetch_products['producto']; ?></div>
+                <div class="flex">
+                    <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+                    <input type="number" name="qty" class="qty" value="1" min="1" 
+                    max="99" id="">
+
+
+                </div>
             </form>
 
             <?php
@@ -140,6 +154,7 @@ if (isset($_SESSION['user_id'])) {
                 }else {
                     # code...
                 }
+                
             ?>
 
 
