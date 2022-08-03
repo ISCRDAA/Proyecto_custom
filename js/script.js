@@ -5,6 +5,13 @@ document.querySelector('#menu-btn').onclick = () =>{
 
 }
 
+document.querySelectorAll('input[type="num"]').forEach(input =>{
+    input.oninput = () =>{
+        if (input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
+
+    }
+})
+
 profile = document.querySelector('.header .flex .profile');
 
 document.querySelector('#user-btn').onclick = () =>{
@@ -19,8 +26,7 @@ function loader(){
     document.querySelector('.loader').style.display = 'none';
 }
 
-// notice 1000 = 1 seconds
-// so 2000 = 2 seconds
+
 
 function fadeOut(){
     setInterval(loader, 1000);

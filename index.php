@@ -131,28 +131,28 @@ if (isset($_SESSION['user_id'])) {
                     while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
             ?>
             <form action="" method="POST" class="box">
-                <input type="hidden" name="pid" value="<?= $fetch_products['id']; ?>">
                 <input type="hidden" name="producto" value="<?= $fetch_products['producto']; ?>">
                 <input type="hidden" name="precio" value="<?= $fetch_products['precio']; ?>">
                 <input type="hidden" name="imagen" value="<?= $fetch_products['imagen']; ?>">
-                <a href="quick_view.php?pid=<?= $fetch_products['id']; ?>" class="fas fa-eye"></a>
+                <a href="vista rapida.php?pid=<?= $fetch_products['producto']; ?>" class="fas fa-eye"></a>
                 <button type="submit" name="add_to_cart" class="fas fa-shopping-cart"></button>
                 <img src="uploaded_img/<?= $fetch_products['imagen']; ?>" class="image" alt="">
-                <a href="" class="category.php?category=<?= $fetch_products['categoria']; ?>"></a>
-                <div class="name"><?= $fetch_products['producto']; ?></div>
+                 <a href="categoria.php?category=<?= $fetch_products['genero'];?>" class="cat"><?= $fetch_products['genero']; ?> </a>
+                
+                <div class="name"><?= $fetch_products['estilo']; ?></div>
                 <div class="flex">
-                    <div class="price"><span>$</span><?= $fetch_products['price']; ?></div>
+                    <div class="price"><span>$</span><?= $fetch_products['precio']; ?></div>
                     <input type="number" name="qty" class="qty" value="1" min="1" 
-                    max="99" id="">
+                    max="99" maxlength="2">
 
 
                 </div>
             </form>
 
             <?php
-                    }
+             }
                 }else {
-                    # code...
+                    echo '<div class="empty">No hay productos por el momento</div>';
                 }
                 
             ?>
@@ -182,7 +182,9 @@ if (isset($_SESSION['user_id'])) {
 
 
 
-
+    <div class="loader">
+    <img src="images/loader.gif" alt="">
+    </div>
 
     <!-- seccion footer inicio -->
     <?php include 'components/footer.php' ?>
