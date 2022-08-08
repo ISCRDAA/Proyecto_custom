@@ -408,7 +408,7 @@ section{
 }
 
 .home-category .box-container .box:hover img{
-    filter:invert(2);
+    filter:invert(10);
 
 }
 
