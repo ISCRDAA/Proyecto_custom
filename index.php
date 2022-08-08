@@ -101,14 +101,19 @@ if (isset($_SESSION['user_id'])) {
     <section class="home-category">
         <h1 class="title">Categorias</h1>
         <div class="box-container">
-            <a href="categoria.php?categoria=estampado" class="box">
+            <a href="categoria.php?category=Unisex" class="box">
                 <img src="images/estampado2.jpg" alt="">
-                <h3>Estampado</h3>
+                <h3>Unisex</h3>
             </a>
 
-            <a href="categoria.php?categoria=sublimado" class="box">
+            <a href="categoria.php?category=Hombre" class="box">
                 <img src="images/sublimados.jpg" alt="">
-                <h3>Sublimados</h3>
+                <h3>Hombre</h3>
+            </a>
+
+            <a href="categoria.php?category=Mujer" class="box">
+                <img src="images/sublimados.jpg" alt="">
+                <h3>Mujer</h3>
             </a>
 
 
@@ -124,7 +129,7 @@ if (isset($_SESSION['user_id'])) {
         <h1 class="title"> productos en oferta </h1>
 
         <div class="box-container">
-            <?php 
+            <?php
                 $select_products = $conn->prepare("SELECT * FROM `productos` LIMIT 6");
                 $select_products->execute();
                 if ($select_products->rowCount() > 0)  {
@@ -137,7 +142,7 @@ if (isset($_SESSION['user_id'])) {
                 <a href="vista rapida.php?pid=<?= $fetch_products['producto']; ?>" class="fas fa-eye"></a>
                 <button type="submit" name="add_to_cart" class="fas fa-shopping-cart"></button>
                 <img src="uploaded_img/<?= $fetch_products['imagen']; ?>" class="image" alt="">
-                 <a href="categoria.php?category=<?= $fetch_products['genero'];?>" class="cat"><?= $fetch_products['genero']; ?> </a>
+                 <a href="categoria.php?category=<?= $fetch_products['genero'];?>" class="cate"><?= $fetch_products['genero']; ?> </a>
                 
                 <div class="name"><?= $fetch_products['estilo']; ?></div>
                 <div class="flex">
