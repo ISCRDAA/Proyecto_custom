@@ -13,6 +13,6 @@
 		$pass
 				);
 
-	echo $obj->registroUsuario($datos);
+	echo $obj->registroUsuario($datos);//linea que manda a llamar la funcion registrousuario de Usuarios.php
 
  ?>

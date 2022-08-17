@@ -29,6 +29,7 @@
 			$sql="INSERT into articulos (id_categoria,
 										id_imagen,
 										id_usuario,
+										codigo,
 										nombre,
 										descripcion,
 										cantidad,
@@ -41,6 +42,7 @@
 									'$datos[4]',
 									'$datos[5]',
 									'$datos[6]',
+									'$datos[7]',
 									'$fecha')";
 			return mysqli_query($conexion,$sql);
 		}

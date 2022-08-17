@@ -5,7 +5,7 @@
 			$c=new conectar();
 			$conexion=$c->conexion();
 
-			$fecha=date('Y-m-d');
+			$fecha=date('Y-m-d');//fecha año, mes y dia
 
 			$sql="INSERT into usuarios (nombre,
 								apellido,
@@ -43,7 +43,7 @@
 			$c=new conectar();
 			$conexion=$c->conexion();
 
-			$password=sha1($datos[1]);
+			$password=sha1($datos[1]);//encrptacón de datos
 
 			$sql="SELECT id_usuario 
 					from usuarios 

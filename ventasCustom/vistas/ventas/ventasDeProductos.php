@@ -23,11 +23,14 @@ $conexion=$c->conexion();
 					<option value="<?php echo $cliente[0] ?>"><?php echo $cliente[2]." ".$cliente[1] ?></option>
 				<?php endwhile; ?>
 			</select>
+			<label>Codigo de barras</label>
+			<input type="text" class="form-control input-sm" id="productoVenta" name="productoVenta" >
 			<label>Producto</label>
-			<select class="form-control input-sm" id="productoVenta" name="productoVenta">
+			<input readonly="" type="text" class="form-control input-sm" id="nombreV" name="nombreV">
+			<!--<select class="form-control input-sm" id="productoVenta" name="productoVenta">
 				<option value="A">Selecciona</option>
 				<?php
-				$sql="SELECT id_producto,
+				/*$sql="SELECT id_producto,
 				nombre
 				from articulos";
 				$result=mysqli_query($conexion,$sql);
@@ -35,8 +38,10 @@ $conexion=$c->conexion();
 				while ($producto=mysqli_fetch_row($result)):
 					?>
 					<option value="<?php echo $producto[0] ?>"><?php echo $producto[1] ?></option>
-				<?php endwhile; ?>
+				<?php endwhile; */?>
 			</select>
+			<label>Codigo de Barras</label>
+			<input readonly="" type="text" class="form-control input-sm" id="codigoV" name="codigoV">-->
 			<label>Descripcion</label>
 			<textarea readonly="" id="descripcionV" name="descripcionV" class="form-control input-sm"></textarea>
 			<label>Cantidad</label>
@@ -69,6 +74,7 @@ $conexion=$c->conexion();
 				success:function(r){
 					dato=jQuery.parseJSON(r);
 
+					$('#nombreV').val(dato['nombre']);
 					$('#descripcionV').val(dato['descripcion']);
 					$('#cantidadV').val(dato['cantidad']);
 					$('#precioV').val(dato['precio']);

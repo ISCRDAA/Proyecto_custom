@@ -27,10 +27,11 @@
 					$datos[0]=$_POST['categoriaSelect'];
 					$datos[1]=$idimagen;
 					$datos[2]=$iduser;
-					$datos[3]=$_POST['nombre'];
-					$datos[4]=$_POST['descripcion'];
-					$datos[5]=$_POST['cantidad'];
-					$datos[6]=$_POST['precio'];
+					$datos[3]=$_POST['codigo'];
+					$datos[4]=$_POST['nombre'];
+					$datos[5]=$_POST['descripcion'];
+					$datos[6]=$_POST['cantidad'];
+					$datos[7]=$_POST['precio'];
 					echo $obj->insertaArticulo($datos);
 				}else{
 					echo 0;

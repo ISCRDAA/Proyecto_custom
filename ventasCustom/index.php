@@ -21,7 +21,7 @@
 	<script src="librerias/jquery-3.2.1.min.js"></script>
 	<script src="js/funciones.js"></script>
 </head>
-<body style="background-color: gray">
+<body style="background-color: black">
 	<br><br><br>
 	<div class="container">
 		<div class="row">
@@ -31,7 +31,7 @@
 					<div class="panel panel-heading ">Sistema de ventas y almacen</div>
 					<div class="panel panel-body">
 						<p>
-							<img src="img/logo1.jpg"  height="190">
+							<img src="img/Custom2_2.png"   width="330" height="250">
 						</p>
 						<form id="frmLogin">
 							<label>Usuario</label>
@@ -56,7 +56,7 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#entrarSistema').click(function(){
-
+		//nombre del boton
 		vacios=validarFormVacio('frmLogin');
 
 			if(vacios > 0){
@@ -65,6 +65,7 @@
 			}
 
 		datos=$('#frmLogin').serialize();
+		// de donde se sacan los datos
 		$.ajax({
 			type:"POST",
 			data:datos,

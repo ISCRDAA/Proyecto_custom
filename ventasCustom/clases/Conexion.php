@@ -1,6 +1,6 @@
 <?php 
 
-	class conectar{
+	class conectar{//los metodos prvados son seguro porque solo se pueden acceder por esa clase
 		private $servidor="localhost";
 		private $usuario="root";
 		private $password="";

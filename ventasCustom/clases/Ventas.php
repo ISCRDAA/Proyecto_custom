@@ -6,6 +6,7 @@ class ventas{
 		$conexion=$c->conexion();
 
 		$sql = "SELECT 
+					art.codigo,
 				    art.nombre,
 				    art.descripcion,
 				    art.cantidad,
@@ -15,21 +16,23 @@ class ventas{
 				    articulos AS art
 				        INNER JOIN
 				    imagenes AS img ON art.id_imagen = img.id_imagen
-				        AND art.id_producto = '$idproducto'";
+				        AND art.codigo = '$idproducto'";
 		$result=mysqli_query($conexion,$sql);
 
 		$ver=mysqli_fetch_row($result);
 
-		$d=explode('/', $ver[3]);
+
+		$d=explode('/', $ver[4]);
 
 		$img=$d[1].'/'.$d[2].'/'.$d[3];
 
 		$data=array(
-			'nombre' => $ver[0],
-			'descripcion' => $ver[1],
-			'cantidad' => $ver[2],
+			'codigo' => $ver[0],
+			'nombre' => $ver[1],
+			'descripcion' => $ver[2],
+			'cantidad' => $ver[3],
 			'ruta' => $img,
-			'precio' => $ver[4]
+			'precio' => $ver[5]
 		);		
 		return $data;
 	}

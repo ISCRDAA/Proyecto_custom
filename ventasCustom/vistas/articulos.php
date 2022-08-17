@@ -31,8 +31,8 @@ if(isset($_SESSION['usuario'])){
 								<option value="<?php echo $ver[0] ?>"><?php echo $ver[1]; ?></option>
 							<?php endwhile; ?>
 						</select>
-						<!--<label>Codigo de barras</label>
-						<input type="text" class="form-control input-sm" id="codigo" name="codigo">-->
+						<label>Codigo de barras</label>
+						<input type="text" class="form-control input-sm" id="codigo" name="codigo">
 						<label>Nombre</label>
 						<input type="text" class="form-control input-sm" id="nombre" name="nombre">
 						<label>Descripcion</label>
