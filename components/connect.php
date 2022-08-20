@@ -1,5 +1,5 @@
 <?php
-$db_name = 'mysql:host=localhost;dbname=bd_custom';
+$db_name = 'mysql:host=localhost;dbname=ventas';
 $user_name = 'root';
 $user_password = '';
 

@@ -3,13 +3,13 @@ include 'components/connect.php';
 
 
 session_start();
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+if (isset($_SESSION['id_cliente'])) {
+    $id_cliente = $_SESSION['id_cliente'];
 } else {
-    $user_id = '';
+    $id_cliente = '';
 }
 
-
+include 'components/add_carrito.php';
 
 
 ?>
@@ -37,8 +37,7 @@ if (isset($_SESSION['user_id'])) {
 
     <!-- seccion header inicio -->
 
-    <?php include 'components/user_header.php' ?>
-
+   <?php include 'components/user_header.php' ?>
     <!-- seccion header fin -->
 
 
@@ -102,18 +101,23 @@ if (isset($_SESSION['user_id'])) {
         <h1 class="title">Categorias</h1>
         <div class="box-container">
             <a href="categoria.php?category=Unisex" class="box">
-                <img src="images/estampado2.jpg" alt="">
+                <img src="images/Unisex.png" alt="">
                 <h3>Unisex</h3>
             </a>
 
-            <a href="categoria.php?category=Hombre" class="box">
-                <img src="images/sublimados.jpg" alt="">
+            <a href="categoria.php?category=hombre" class="box">
+                <img src="images/,asculino.jpg" alt="">
                 <h3>Hombre</h3>
             </a>
 
-            <a href="categoria.php?category=Mujer" class="box">
-                <img src="images/sublimados.jpg" alt="">
+            <a href="categoria.php?category=mujer" class="box">
+                <img src="images/femeninio.jpg" alt="">
                 <h3>Mujer</h3>
+            </a>
+
+            <a href="categoria.php?category=taza" class="box">
+                <img src="images/Tarro3.jpg" alt="">
+                <h3>Tazas / Tarros</h3>
             </a>
 
 
@@ -126,25 +130,26 @@ if (isset($_SESSION['user_id'])) {
 
 
     <section class="products">
-        <h1 class="title"> productos en oferta </h1>
+        <h1 class="title"> productos </h1>
 
         <div class="box-container">
             <?php
-                $select_products = $conn->prepare("SELECT * FROM `productos` LIMIT 6");
+                $select_products = $conn->prepare("SELECT * FROM `articulos` LIMIT 4");
                 $select_products->execute();
                 if ($select_products->rowCount() > 0)  {
                     while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
             ?>
             <form action="" method="POST" class="box">
-                <input type="hidden" name="producto" value="<?= $fetch_products['producto']; ?>">
+                <input type="hidden" name="pid" value="<?= $fetch_products['id_producto']; ?>">
+                <input type="hidden" name="producto" value="<?= $fetch_products['nombre']; ?>">
                 <input type="hidden" name="precio" value="<?= $fetch_products['precio']; ?>">
                 <input type="hidden" name="imagen" value="<?= $fetch_products['imagen']; ?>">
-                <a href="vista rapida.php?pid=<?= $fetch_products['producto']; ?>" class="fas fa-eye"></a>
+                <a href="vista rapida.php?pid=<?= $fetch_products['nombre']; ?>" class="fas fa-eye"></a>
                 <button type="submit" name="add_to_cart" class="fas fa-shopping-cart"></button>
                 <img src="uploaded_img/<?= $fetch_products['imagen']; ?>" class="image" alt="">
                  <a href="categoria.php?category=<?= $fetch_products['genero'];?>" class="cate"><?= $fetch_products['genero']; ?> </a>
                 
-                <div class="name"><?= $fetch_products['estilo']; ?></div>
+                <div class="name"><?= $fetch_products['descripcion']; ?></div>
                 <div class="flex">
                     <div class="price"><span>$</span><?= $fetch_products['precio']; ?></div>
                     <input type="number" name="qty" class="qty" value="1" min="1" 

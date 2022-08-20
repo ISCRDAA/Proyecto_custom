@@ -3,10 +3,10 @@ include 'components/connect.php';
 
 
 session_start();
-if (isset($_SESSION['user_id'])) {
-    $user_id = $_SESSION['user_id'];
+if (isset($_SESSION['id_cliente'])) {
+    $id_cliente = $_SESSION['id_cliente'];
 } else {
-    $user_id = '';
+    $id_cliente = '';
 }
 
 
@@ -51,19 +51,18 @@ if (isset($_SESSION['user_id'])) {
         <div class="box-container">
             <?php
             $pid = $_GET['pid'];
-            $select_products = $conn->prepare("SELECT * FROM `productos` WHERE  producto = ?");
+            $select_products = $conn->prepare("SELECT * FROM `articulos` WHERE  nombre = ?");
             $select_products->execute([$pid]);
             if ($select_products->rowCount() > 0)  {
                 while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
                     ?>
                     <form action="" method="POST" class="box">
-                        <input type="hidden" name="producto" value="<?= $fetch_products['producto']; ?>">
+                        <input type="hidden" name="producto" value="<?= $fetch_products['nombre']; ?>">
                         <input type="hidden" name="precio" value="<?= $fetch_products['precio']; ?>">
                         <input type="hidden" name="imagen" value="<?= $fetch_products['imagen']; ?>">
-                        <a href="vista rapida.php?pid=<?= $fetch_products['producto']; ?>" class="fas fa-eye"></a>
                         <button type="submit" name="add_to_cart" class="fas fa-shopping-cart"></button>
                         <img src="uploaded_img/<?= $fetch_products['imagen']; ?>" class="image" alt="">
-                        <div class="name"><?= $fetch_products['estilo']; ?></div>
+                        <div class="name"><?= $fetch_products['descripcion']; ?></div>
                         <div class="flex">
                             <div class="price"><span>$</span><?= $fetch_products['precio']; ?></div>
                             <input type="number" name="qty" class="qty" value="1" min="1"

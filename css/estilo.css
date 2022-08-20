@@ -89,13 +89,49 @@ section{
     width: 100%;
 }
 
+/* inicio de mensaje de registro */
+.men {
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2rem;
+    z-index: 1100;
+    border: var(--border);
+}
+.men span{
+    font-size: 2rem;
+    color:var(--black);
+
+}
+
+.men i{
+    font-size: 2.5rem;
+    color:var(--red);
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.men i:hover{
+    transform: rotate(90deg);
+}
+
+/* fin de mensaje de registro */
+
 .header{
     position: sticky;
     top: 0; left: 0; 
     z-index: 1000;
     background-color: var(--white);
     border-bottom: var(--border);
+
 }
+
+
 
 .header .flex{
     display: flex;
@@ -480,12 +516,12 @@ section{
 .products .box-container .box:hover .fa-shopping-cart{
     right: 1rem;
 }
-.products .box-container .box .cat{
+.products .box-container .box .cate{
     font-size: 2rem;
     color: blue;
 }
 
-.products .box-container .box .cat:hover {
+.products .box-container .box .cate:hover {
     color: blue;
     text-decoration: underline;
 }
@@ -969,7 +1005,7 @@ margin-top: 1.5rem;
 }
 
 .checkout form .cart-items {
-    background-color: var(--black);
+    background-color: var(--light-color);
     padding: 2rem;
     padding-top: 0;
 }
@@ -1016,7 +1052,7 @@ margin-top: 1.5rem;
 }
 
 .checkout form .user-info p span {
-    color: var(--black);
+    color: black;
 }
 
 .checkout form .user-info .box {
@@ -1056,6 +1092,8 @@ margin-top: 1.5rem;
 }
 
 /*Fin de Ordenes*/
+
+
 
 
 

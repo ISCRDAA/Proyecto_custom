@@ -5,7 +5,7 @@ document.querySelector('#menu-btn').onclick = () =>{
 
 }
 
-document.querySelectorAll('input[type="num"]').forEach(input =>{
+document.querySelectorAll('input[type="number"]').forEach(input =>{
     input.oninput = () =>{
         if (input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
 
@@ -29,7 +29,7 @@ function loader(){
 
 
 function fadeOut(){
-    setInterval(loader, 1000);
+    setInterval(loader, 100);
 }
 
 window.onload = fadeOut();
