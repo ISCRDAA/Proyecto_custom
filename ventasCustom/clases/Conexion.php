@@ -2,8 +2,8 @@
 
 	class conectar{//los metodos prvados son seguro porque solo se pueden acceder por esa clase
 		private $servidor="localhost";
-		private $usuario="root";
-		private $password="";
+		private $usuario="ventas";
+		private $password="12345";
 		private $bd="ventas";
 
 		public function conexion(){
